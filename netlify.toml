@@ -1,5 +1,6 @@
 [build]
-command = "pnpm run deploy"
+# Ensure the target folder exists before running your deploy script
+command = "mkdir -p packages/webamp/dist/demo-site && pnpm run deploy"
 publish = "packages/webamp/dist/demo-site/"
 
 # A short URL for listeners of https://changelog.com/podcast/291
@@ -37,3 +38,4 @@ force = true
 
 [build.environment]
 NODE_VERSION = "22.11.0"
+PNPM_VERSION = "9.12.0"
